@@ -545,7 +545,8 @@ svg {
 
 /* #region section our portfolio */
 .portfolio {
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 96px 0;
 }
 
 .portfolio-title {
@@ -562,12 +563,14 @@ svg {
 }
 .portfolio-menu {
   display: flex;
-  flex-wrap: wrap;
-  gap: 48px 24px;
+  /* flex-wrap: wrap;
+  gap: 48px 24px; */
+  flex-direction: column;
+  gap: 48px;
 }
 
 .portfolio-item {
-  width: calc((100% - (2 * 24px)) / 3);
+  /* width: calc((100% - (2 * 24px)) / 3); */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -621,16 +624,19 @@ svg {
 /* #region footer */
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 96px 0;
 }
 
 .container-footer {
   display: flex;
-  align-items: baseline;
+  /* align-items: baseline; */
+  flex-direction: column;
+  text-align: center;
 }
 
 .container-logo {
-  margin-right: 120px;
+  /* margin-right: 120px; */
 }
 .footer-logo {
   display: inline-block;
@@ -652,11 +658,13 @@ svg {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
+  margin-bottom: 72px;
+  text-align: left;
 }
-.social-media {
+/* .social-media {
   margin-right: 80px;
-}
+} */
 
 .social-media-text {
   font-weight: 500;
@@ -670,6 +678,8 @@ svg {
 .icon-main-footer {
   display: flex;
   gap: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .icon-item-footer {
   width: calc((100% - (3 * 16px)) / 4);
@@ -683,6 +693,7 @@ svg {
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 72px;
 }
 .icon-footer:hover,
 .icon-footer:focus {
@@ -693,8 +704,10 @@ svg {
 .subscribe {
 }
 .subscribe-form {
+  /* display: flex;
+  gap: 24px; */
   display: flex;
-  gap: 24px;
+  flex-direction: column;
 }
 .subscribe-text {
   font-weight: 500;
@@ -708,9 +721,10 @@ svg {
 .subscribe-input {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  opacity: 0.3;
   background-color: #2e2f42;
   padding-left: 16px;
   background-color: transparent;
@@ -718,9 +732,15 @@ svg {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
+  margin-bottom: 16px;
 }
 .subscribe-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   color: #fff;
+  opacity: 0.6;
 }
 .subscribe-btn {
   display: flex;
@@ -729,7 +749,7 @@ svg {
   flex-direction: row;
   border-radius: 4px;
   padding: 8px 24px;
-  min-width: 165px;
+  max-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   font-weight: 500;
@@ -739,6 +759,8 @@ svg {
   text-align: center;
   color: #fff;
   border: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 .subscribe-icon-image {
   fill: #fff;
@@ -772,12 +794,16 @@ svg {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   border-radius: 4px;
-  width: 408px;
-  min-height: 584px;
+  /* width: 408px;
+  min-height: 584px; */
+  width: 288px;
+  min-height: 623px;
   padding-top: 72px;
-  padding-right: 24px;
+  /* padding-right: 24px; */
+  padding-right: 16px;
   padding-bottom: 24px;
-  padding-left: 24px;
+  /* padding-left: 24px; */
+  padding-left: 16px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -873,7 +899,7 @@ svg {
 .modal-message-text {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  min-width: 360px;
+  min-width: 256px;
   height: 120px;
   resize: none;
   padding: 8px 16px;
@@ -1087,6 +1113,48 @@ svg {
   .card {
     width: calc((100% - 24px) / 2);
   }
+  /* ---------------- */
+  .portfolio-menu {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 72px 24px;
+  }
+  .portfolio-item {
+    width: calc((100% - 24px) / 2);
+  }
+  /* ----------------- */
+  .container-footer {
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: left;
+    margin-left: 108px;
+  }
+  .container-logo {
+    margin-right: 24px;
+  }
+  .icon-main-footer {
+    padding: 0;
+  }
+  .subscribe-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .subscribe-input {
+    width: 264px;
+  }
+  .subscribe-btn {
+    min-width: 165px;
+  }
+  /* ----------------- */
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  .modal-message-text {
+    min-width: 360px;
+  }
 }
 /*endregion media  768px */
 
@@ -1161,6 +1229,32 @@ svg {
   }
   .card {
     width: calc((100% - (3 * 24px)) / 4);
+  }
+  /* --------------- */
+  .portfolio {
+    padding: 120px 0;
+  }
+  .portfolio-menu {
+    gap: 48px 24px;
+  }
+  .portfolio-item {
+    width: calc((100% - (2 * 24px)) / 3);
+  }
+  /* --------------------- */
+  .footer {
+    padding: 100px 0;
+  }
+  .container-footer {
+    align-items: baseline;
+  }
+  .container-logo {
+    margin-right: 120px;
+  }
+  .footer-text {
+    margin-bottom: 16px;
+  }
+  .social-media {
+    margin-right: 80px;
   }
 }
 /*endregion media  1158px */

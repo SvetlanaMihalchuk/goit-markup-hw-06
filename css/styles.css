@@ -452,10 +452,16 @@ svg {
 /* #endregion section key decisions */
 
 /* #region section our team */
+.our-team-container {
+  padding-left: 28px;
+  padding-right: 28px;
+}
 .our-team {
   background-color: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .our-team-title {
@@ -472,14 +478,17 @@ svg {
 }
 
 .our-team-list {
+  /* display: flex;
+  gap: 24px; */
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .card {
   background: #fff;
   border-radius: 0 0 4px 4px;
-  width: calc((100% - (3 * 24px)) / 4);
+  /* width: calc((100% - (3 * 24px)) / 4); */
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
@@ -1065,6 +1074,19 @@ svg {
   .key-decisions-title {
     text-align: left;
   }
+  /* --------------------- */
+  .our-team-container {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+  .our-team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+  }
+  .card {
+    width: calc((100% - 24px) / 2);
+  }
 }
 /*endregion media  768px */
 
@@ -1127,6 +1149,18 @@ svg {
   }
   .key-decisions-text {
     font-weight: 400;
+  }
+  /* ------------------- */
+  .our-team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .our-team-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .card {
+    width: calc((100% - (3 * 24px)) / 4);
   }
 }
 /*endregion media  1158px */
